@@ -262,7 +262,7 @@ func toInt(l yyLexer, lval *yySymType, str string) int {
 func toDecimal(l yyLexer, lval *yySymType, str string) int {
 	dec, err := ast.NewDecimal(str)
 	if err != nil {
-		l.AppendError(l.Errorf("decimal literal: %v", err))
+		//l.AppendError(l.Errorf("decimal literal: %v", err))
 	}
 	lval.item = dec
 	return decLit
